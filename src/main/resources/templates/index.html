@@ -1,0 +1,103 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {font-family: "Lato", sans-serif}
+    .mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+        <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WORK</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large">WORK</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
+
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+    <!-- Main image -->
+    <div>
+        <img th:src="Photo28_24.jpg" style="width:100%">
+    </div>
+
+</div>
+
+<!-- The Bio Section -->
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">ALEXANDRA ELIZABETH LJADOV</h2>
+    <p class="w3-opacity"><i>Art by heart</i></p>
+    <p class="w3-justify">Way back in 2015, Estonian model Alexandra Elizabeth Ljadov, fresh off a breakout season that included walking a marathon 74 shows,
+        received a career-making endorsement. Victoria Beckham, former Posh Spice, current posh tastemaker, cited the then 17-year-old among her fashion inspirations.
+        Since then, Ljadov worked with Beckham, of course, in addition to Dior and Versace couture, Prada, and Calvin Klein, but she hasn’t been content to simply appear in front of the camera since she landed on the mainstream radar of the fashion industry:
+        She’s an accomplished art director who recently worked on a surreal, to-be-released video for “Style Wars,” a collaboration between rapper and Mr. Robot actor Joey Bada$$ and rapper Chuck Strangers, as well as a Tonya Harding–themed video editorial for V magazine,
+        for which she both acted and directed. - W Magazine</p>
+</div>
+
+<!-- Work selection -->
+<div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+        <h2 class="w3-wide w3-center">MY WORK</h2>
+        <video width="1000" height="620" controls>
+            <source th:src="2017projects.mp4" type="video/mp4">
+            <source th:src="2017projects.ogg" type="video/ogg">
+        </video>
+    </div>
+</div>
+
+<!-- The Contact Section -->
+<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+    <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom">
+            <i class="fa fa-map-marker" style="width:30px"></i> New York City, US<br>
+            <i class="fa fa-phone" style="width:30px"></i> Phone: +1(929)289-4276 <br>
+            <i class="fa fa-envelope" style="width:30px"> </i> Email: alexandra@mail.com<br>
+        </div>
+        <div class="w3-col m6">
+            <form action="#" method="post" th:action="@{/}">
+                <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                    <div class="w3-half">
+                        <input class="w3-input w3-border" type="text"  th:field="${customer.name}" placeholder="Name"/>
+                    </div>
+                    <div class="w3-half">
+                        <input class="w3-input w3-border" type="email"  th:field="${customer.email}" placeholder="Email"/>
+                    </div>
+                </div>
+                <input class="w3-input w3-border" type="text"  th:field="${customer.message}" placeholder="Message"/>
+                <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+
+    <a href="https://www.instagram.com/alexandraelizabethljadov"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+
+
+    <p class="w3-medium">Powered by Fishboy</p>
+</footer>
+
+
+
+</body>
+</html>
+
